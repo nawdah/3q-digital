@@ -32,6 +32,7 @@ function challenge_1(url){
 
         //read through the html
         const $ = cheerio.load(html);
+        
         $('div.h-padding-b-default').each((row, element) => {
             $(element).find('div div').each((i, el) => {
                 //locate where price is and extract the text
