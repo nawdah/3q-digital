@@ -1,17 +1,22 @@
 function checkCookies(){
     
-    var elements = ['nav-1', 'nav-2', 'nav-3', 'nav-4', 'nav-5', 'nav-6', 'nav-7', 'nav-8', 'nav-9', 'nav-10', 'level0'];
+    var elements = ['.nav-1', '.nav-2', '.nav-3', '.nav-4', '.nav-5', '.nav-6', '.nav-7', '.nav-8', '.nav-9', '.nav-10', '.level0'];
     
     for(i=0; elements.length; i++){
-        var top_menu = document.querySelector(elements[i]).addEventListener("click", function(){
-            var browserClick = getCookie("browserClick");
-            if (browserClick != "") {
-            alert("Cookie has been set! Value: " + browserClick);
-            } else {
-                browserClick = prompt(top_menu.textContent, "");
-            }
-        })
+
+        var top_menu = document.querySelector(elements[i])
+        if(top_menu != null){
+            top_menu.addEventListener("click", function(){
+                var browserClick = getCookie("browserClick");
+                if (browserClick != "") {
+                 var browserCookie = alert("Cookie has been set! Value: " + browserClick);
+                } else {
+                    browserClick = prompt(top_menu.textContent, "");
+                }
+            })
+          }
     }
+    return (browserCooker || browserClick)
 };
     
 //     var nike = document.querySelector('nav-1').addEventListener("click", function(){
