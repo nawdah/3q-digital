@@ -1,6 +1,7 @@
 function price(){
     var priceElement = document.querySelector('.fwkyhU').textContent;
-var data = [];
+    
+    var data = [];
     //parse through the price text to extract the symbol and value of price
     var currency_symbol = priceElement.charAt(0);
     var price = priceElement.slice(1);
@@ -45,3 +46,5 @@ var data = [];
     var obj = data[0];
     console.log(obj);
 }
+
+price();
