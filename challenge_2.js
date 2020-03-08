@@ -1,17 +1,20 @@
-function clickHandler(){
-    var button1 = document
-        .querySelector(".styles__tryFreeButton___1r0YY ")
-        .addEventListener("click", function(){ 
-            alert("Clicked Button 1");
-            console.log("Clicked Button 1");
-    });
+// setting a self-executing, anonymous function called clickHandler()
 
-    var button2 = document
-        .querySelector(".styles__signUpButtonPromoPage___3H-U- ")
-        .addEventListener("click", function(){ 
-            alert("Clicked Button 2");
-            console.log("Clicked Button 2");
-    });
+(function clickHandler(){
+    // initialize a const variable called buttonArray
+    // that query selects all attributes with the href as /signup
+    const buttonArray = document.querySelectorAll("[href='/signup']" );
 
-    return (button1 || button2); 
-};
+    // iterate through the buttonArray to attach click listeners
+    for(let i = 0; i < buttonArray.length; i++){
+
+        // adding a listener to each button on a click 
+        // creating a function that alerts when a button has been clicked
+        buttonArray[i].addEventListener("click", function(){ 
+            alert(`Clicked Button ${i+1}`);
+            
+        })
+
+    };
+
+})();
