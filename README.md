@@ -10,7 +10,7 @@ JavaScript Coding Callenge
 >  currency: ‘USD’ 
 > }
 
-Before beginning to solve the challenge, I needed to become familiar with Target's HTML and what I wanted to parse from the website. By highlighting the price of the playstation and right-clicking Inspect, I am taken to the exact <div> tag where the price is encoded. 
+Before beginning to solve the challenge, I needed to become familiar with Target's HTML and what I wanted to parse from the website. By highlighting the price of the playstation and right-clicking Inspect, I am taken to the exact div tag where the price is encoded. 
 
 Rather than using the class name to select my value, I access the exact attribute for my product price called `data-test="product-price"`. Now I could begin constructing the code for my function. 
 
